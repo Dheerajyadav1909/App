@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    text-align: center;
+    width: 350px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0077cc;
+  }
+  
+  .facebook-login {
+    background-color: #4267B2;
+  }
+  
+  .forgot-password {
+    font-size: 0.9rem;
+    color: #0095f6;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #999;
+    font-size: 0.8rem;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+    margin: 0 10px;
+  }
+  
+  .signup {
+    margin-top: 20px;
+  }
+  
+  .signup a {
+    color: #0095f6;
+    text-decoration: none;
+  }
+  
+  .get-app {
+    margin-top: 20px;
+  }
+  
+  .get-app img {
+    width: 120px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: #fafafa;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-links {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #00376b;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    color: #999;
+  }
+  
+  .footer-bottom span {
+    margin: 0 10px;
+  }
+  
+  .dropdown {
+    font-size: 0.7rem;
+  }
+  
